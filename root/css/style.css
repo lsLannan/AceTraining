@@ -21,3 +21,7 @@ ul {
   li a:hover{
     background-color: rgba(235, 49, 142, 0.842);
   }
+
+  li a:active{
+    background-color: lightcoral;
+  }
