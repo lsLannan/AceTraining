@@ -6,33 +6,34 @@
         <title>Tutor Courses</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/root/css/style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        
-        <h1>Tutor Page</h1>
+        <h1>Tutor Course page</h1>
 
-        <!--nav bar, TODO: turn into php doc for reuse-->
-        <nav>
-            <ul>
-                <li><a href="/root/tutor-home.html">HOME</a></li>
-                <li><a class="active" href="/root/tutor-courses.html">COURSES</a></li>
-                <li><a href="#enroll">ENROL</a></li>
-                <li><a href="">RECORDS</a></li>
-            </ul>
-        </nav>
+            <!--nav bar, TODO: turn into php doc for reuse-->
+            <div class="topnav">
+                <a href="#"><img src="ace-logo.png" alt="logo"></a>
+                <a href="tutor-home.html">HOME</a>
+                <a class="active" href="tutor-courses.html">COURSES</a>
+                <a href="#enroll">ENROL</a>
+                <a href="#records">RECORDS</a>
+                <a href="#login" class="split">LOG IN</a>
+            </div>
+        <main>
+            <h1>Tutor Courses</h1><hr>
         
-        <h1>Tutor Courses</h1>
-        
-        <!--Uploading documents-->
-        <h2>Uploading documents</h2>
-        <form method="post" action="#php" enctype="multipart/form-data">
-            <label for="upload">Select a file:</label>
-            <input type="file" id="upload">
+            <!--Uploading documents-->
+            <h2>Uploading documents</h2>
+            <form method="post" action="#php" enctype="multipart/form-data">
+                <label for="upload">Select a file:</label>
+                <input type="file" id="upload">
 
-        </form>
-        
-        
+            </form>
+        </main>    
+        <footer>
+            <p>Hello I'm a footer</p>
+        </footer>
         <script src="" async defer></script>
     </body>
 </html>

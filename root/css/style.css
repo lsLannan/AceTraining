@@ -1,27 +1,54 @@
-ul {
-    list-style-type: none;
+body {
+    background-color: white;
     margin: 0;
-    padding: 0;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+    padding: 0 0 0 0;
+}
+
+img {
+  display: inline-block;
+}
+
+/*TOP NAV BAR*/
+.topnav {
     overflow: hidden;
     background-color: hotpink;
-  }
+}
 
-  li {
-    float: left;
-  }
+/*log in button seperate from rest nav bar*/
+.topnav a.split {
+    float: right;
+}
 
-  li a {
+.topnav a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    float: left;
   }
 
-  li a:hover{
+  .topnav a:hover{
     background-color: rgba(235, 49, 142, 0.842);
   }
 
-  li a:active{
+  .topnav a:active{
     background-color: lightcoral;
   }
+
+  /*FOOTER*/
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: hotpink;
+  color: white;
+  text-align: center;
+}
