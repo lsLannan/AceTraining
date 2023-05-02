@@ -8,21 +8,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
         <!--reusable header link-->
-        <script src="components/header.js" type="text/javascript" defer></script>
         <script src="components/footer.js" type="text/javascript" defer></script>
+        <script src="components/tutor-navbar.js" type="text/javascript" defer></script>
+        
     </head>
     <body>
-        <h1>Tutor Homepage</h1>
+        <!--<h1>Tutor Homepage</h1>-->
+            <header>
+                <a href="#">Ace</a>
+                <a class="split" href="#">LOG IN</a>
+                <a class="split" href="#">REGISTER</a>
+            </header>
 
             <!--nav bar, TODO: turn into php doc for reuse-->
-            <div class="topnav">
-                <a href="#"><img src="ace-logo.png" alt="logo"></a>
-                <a href="tutor-home.html">HOME</a>
-                <a class="active" href="tutor-courses.html">COURSES</a>
-                <a href="tutor-enroll.html">ENROL</a>
-                <a href="#records">RECORDS</a>
-                <a href="#login" class="split">LOG IN</a>
-            </div>
+            <tutor-navbar-component></tutor-navbar-component>
 
         <!--dummy text-->
             <h1>Welcome Tutor</h1><hr>
