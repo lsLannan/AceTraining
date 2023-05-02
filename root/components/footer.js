@@ -12,7 +12,7 @@ class Footer extends HTMLElement {
           left: 0;
           bottom: 0;
           width: 100%;
-          background-color: hotpink;
+          background-color: rgb(0, 230, 230);
           color: white;
           text-align: center;
         }
@@ -25,21 +25,16 @@ class Footer extends HTMLElement {
           text-decoration: none;
           float: left;
         }
-
-        hr {
-          width: 50%;
-        }
         
       </style>
       <footer>
-        <p>Hi I'm a footer :) i'm reuseable now!</p><hr>
         <nav>
-          <a href="#">Our Privacy Policy(working on it)</a> 
+          <a href="#">Our Privacy Policy</a> 
           <a href="#">Contact Us</a> 
           <a href="#">Our Team</a> 
           <a href="#">Terms of Use</a>
         </nav>
-        <p>Ace Training Inc</p> 
+        <p class="split">Ace Training made by LL SD NW</p>
       </footer>
         `;
       }

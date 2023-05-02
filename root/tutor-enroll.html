@@ -7,19 +7,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
+        <script src="components/footer.js" type="text/javascript" defer></script>
+        <script src="components/tutor-navbar.js" type="text/javascript" defer></script>
     </head>
     <body>
         <h1>Tutor Enroll Managment</h1>
 
-            <!--nav bar, TODO: turn into php doc for reuse-->
-            <div class="topnav">
-                <a href="#"><img src="ace-logo.png" alt="logo"></a>
-                <a href="tutor-home.html">HOME</a>
-                <a class="active" href="tutor-courses.html">COURSES</a>
-                <a href="#enroll">ENROL</a>
-                <a href="#records">RECORDS</a>
-                <a href="#login" class="split">LOG IN</a>
-            </div>
+        <tutor-navbar-component></tutor-navbar-component>
 
         <!--dummy text-->
             <h1>Welcome Tutor</h1><hr>
@@ -28,9 +22,7 @@
                 <h2>Student Enrollment</h2>
             </div>
         </main>
-        <footer>
-            <p>Hello I'm a footer :p</p>
-        </footer>
+        <footer-component></footer-component>
         
         <script src="" async defer></script>
     </body>
