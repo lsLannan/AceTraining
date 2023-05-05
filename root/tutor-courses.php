@@ -11,9 +11,8 @@
 
     </head>
     <body>
-        <?php include('header.php'); ?>
-        <?php include('tutor-navbar.php'); ?>
-        <tutor-navbar-component></tutor-navbar-component>
+        <?php include('components/header.php'); ?>
+        <?php include('components/tutor-navbar.php'); ?>
         <main>
             <h1>Tutor Courses</h1><hr>
 
@@ -31,7 +30,7 @@
                 <input type="submit" name="Submit">
             </form>
         </main>    
-        <?php include('footer.php'); ?>
+        <?php include('components/footer.php'); ?>
         <script src="" async defer></script>
     </body>
 </html>

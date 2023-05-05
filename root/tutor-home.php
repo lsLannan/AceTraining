@@ -12,7 +12,7 @@
     </head>
     <body>
         <!--<h1>Tutor Homepage</h1>-->
-        <?php include('header.php'); ?>
+        <?php include('components/header.php'); ?>
 
         
         <?php 
@@ -20,7 +20,7 @@
             //showMenu();
         ?>
             <!--nav bar, TODO: turn into php doc for reuse-->
-            <?php include('tutor-navbar.php'); ?>
+            <?php include('components/tutor-navbar.php'); ?>
 
         <!--dummy text-->
             <h1>Welcome Tutor</h1><hr>
@@ -43,7 +43,7 @@
             </div>
         </main>
         <div>
-            <?php include('footer.php'); ?>
+            <?php include('components/footer.php'); ?>
         </div>
         <script src="" async defer></script>
     </body>

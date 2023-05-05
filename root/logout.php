@@ -13,13 +13,13 @@ session_destroy();
     </head>
     <body>
 
-        <?php include('header.php'); ?>
+        <?php include('components/header.php'); ?>
 
         <div>
             <p>You have been logged out</p>
         </div>
 
-        <?php include('footer.php'); ?>
+        <?php include('components/footer.php'); ?>
         <script src="" async defer></script>
     </body>
 </html>

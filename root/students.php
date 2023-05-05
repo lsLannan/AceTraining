@@ -11,7 +11,7 @@
         
     </head>
     <body>
-        <?php include('header.php'); ?>
+        <?php include('components/header.php'); ?>
 
         <!--dummy text-->
             <h1>Welcome Student</h1><hr>
@@ -38,7 +38,7 @@
             </div>
         </main>
         <div>
-            <?php include('footer.php'); ?>
+            <?php include('components/footer.php'); ?>
         </div>
         <script src="" async defer></script>
     </body>
