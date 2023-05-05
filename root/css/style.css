@@ -1,13 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  height: 100%;
+}
+
 body {
-    background-color: rgb(245,245,245);
-    margin: 0;
+    background-color: whitesmoke;
+    height: 100%;
+
     text-align: center;
     font-family: sans-serif;
+
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 main {
-    background-color: rgb(245,245,245);
-    padding: 0 15% 0 15%;
+    background-color: whitesmoke;
+    width: 90%;
+    margin: 0 5% 0 5%;
+}
+
+/*hero banner*/
+.hero {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 img {
@@ -15,25 +46,28 @@ img {
 }
 
 hr {
+  border-top: 2px solid black;
   width: 50%;
 }
 
-/*TOP NAV BAR*/
+.footer-hr {
+  width: 50%;
+  border-top: 1px solid white;
+  padding: 0;
+}
+
+/*TOP NAV BAR
 .topnav {
     text-align: center;
     overflow: hidden;
-    background-color: rgb(0, 233, 233);
+    background-color: aquamarine;
     padding: 0 40px 4px 40px;
-}
-
-/*log in button seperate from rest nav bar*/
-.topnav a.split {
-    float: right;
+    text-decoration: none;
 }
 
 .topnav a {
     display: block;
-    color: rgba(255, 255, 255, 0.91);
+    color: black;
     text-align: center;
     padding: 0 14px 0 20px;
     text-decoration: none;
@@ -41,49 +75,115 @@ hr {
   }
 
   .topnav a:hover{
-    background-color: rgb(27, 194, 194);
+    background-color: teal;
   }
 
   .topnav a:active{
-    background-color: rgb(14, 250, 250);
+    background-color: teal;
   }
+  */
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: aquamarine;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover{
+    background-color: teal;
+  }
+
+/*log in button seperate from rest nav bar*/
+.split {
+    float: right;
+}
 
   header {
+    box-sizing: content-box;
     text-align: center;
     overflow: hidden;
-    background-color: rgb(0, 233, 233);
+    background-color: aquamarine;
     padding: 0 0 0 0;
-  }
-
-  header a.split {
-    float: right;
+    margin-top: 0;
   }
 
   p.split {
     float: right;
   }
 
-  *{
-    padding: 5px;
-    text-align: center;
-}
+  /*
+div.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+  }
+*/
 
 div.container{
+    box-sizing: border-box;
+    border-radius: 25px;
     background-color: aquamarine;
-    margin: 5%;
+    margin: auto;
+    padding: 10px;
+    align-items: center;
+    width: 60%;
 }
 
-footer {
-    position: fixed;
+div.login-form-container-container{
+  box-sizing: border-box;
+  border-radius: 25px;
+  background-color: aquamarine;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  align-items: center;
+}
+
+  div.form-container{
+    box-sizing: content-box;
+    border-radius: 25px;
+    background-color: teal;
+    border: 2px solid white;
+    margin: auto;
+    padding: 10px;
+    width: 60%;
+    align-items: center;
+  }
+/*
+  div.register-form-container{
+    box-sizing: content-box;
+    border-radius: 25px;
+    border: 2px solid white;
+    background-color: teal;
+    padding: 10px;
+    margin: auto;
+    width: 60%;
+  }
+*/
+
+  footer {
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 10%;
     background-color: aquamarine;
-    color: white;
+    color: black;
     text-align: center;
-  }
-
-  .form-container{
-    background-color: teal;
-    margin: 5%;
+    overflow: hidden;
   }

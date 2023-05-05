@@ -7,18 +7,17 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
+        <?php include('header.php'); ?>
         <main>
-            <div class="container">
-            <?php include('showLogin.php'); ?>
-            </div>
+            <!--TODO: plan to replace with include login.php-->
+            
+        <h1>Hello</h1>   
+        <div class="hero">
+            <img src="https://cdn.pixabay.com/photo/2018/03/26/06/20/desktop-3261768_1280.jpg" alt="background">
+        </div>
 
-            <div class="register-link-container">
-                <a href="showRegister.php">Don't have an account? Regisiter now!</a>
-            </div>
-
-
-
+            <?php include('footer.php'); ?>
         </main>
-        <?php include('footer.php'); ?>
+        
     </body>
 </html>

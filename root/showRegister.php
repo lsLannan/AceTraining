@@ -1,3 +1,4 @@
+<!--THIS IS A FUNCTION NOW USE showRegister() INSTEAD-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,8 +10,8 @@
 
         <div class="container">
             <h2>Registration Form</h2>
-            <div class="form-container">
-                <form action="doRegister.php" method="post">
+            <div class="register-form-container">
+                <form id="register-form" action="doRegister.php" method="post">
                     <label for="forename" class="forename-label">Forename: </label>
                     <input type="text" id="forename" name="forename" placeholder="name pls" required><br><br>
 
@@ -21,14 +22,23 @@
                     <input type="text" id="email" name="email" placeholder="email pls" required><br><br>
 
                     <label for="password" class="password-label">Password: </label>
-                    <input type="text" id="password" name="password" placeholder="password pls" required><br><br>
+                    <input type="password" id="password" name="password" placeholder="password pls" required><br><br>
 
                     <label for="confirm-password" class="confirm-password-label">Confirm password: </label>
-                    <input type="text" id="confirm-password" name="password" placeholder="password again pls" required><br><br>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="password again pls" required><br><br>
 
-                    <input type="submit" value="Submit">
+                    <!--choose permission type-->
+                    <label for="type" class="type-label">Tutor/Student: </label>
+                    <select name="type" id="type">
+                        <option value="tutor">Tutor</option>
+                        <option value="student">Student</option>
+                    </select><br><br>
+
+
+                    <input type="submit" name="submit-button" id="submit-button" value="Submit">
                 </form>
             </div>
         </div>
     </body>
+    <?php include('footer.php'); ?>
 </html>

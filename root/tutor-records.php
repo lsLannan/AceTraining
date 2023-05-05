@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -7,22 +8,20 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
-        <script src="components/footer.js" type="text/javascript" defer></script>
-        <script src="components/tutor-navbar.js" type="text/javascript" defer></script>
+
     </head>
     <body>
-        <h1>Tutor Enroll Managment</h1>
-
-        <tutor-navbar-component></tutor-navbar-component>
+        <?php include('header.php'); ?>
+        <?php include('tutor-navbar.php'); ?>
 
         <!--dummy text-->
             <h1>Welcome Tutor</h1><hr>
         <main>
             <div>
-                <h2>Student Enrollment</h2>
+                <h2>Student Records Hub</h2>
             </div>
         </main>
-        <footer-component></footer-component>
+        <?php include('footer.php'); ?>
         
         <script src="" async defer></script>
     </body>

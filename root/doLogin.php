@@ -1,21 +1,28 @@
-<?php
-echo ($_POST['id'] . "<br />");
-echo ($_POST['password'] . "<br />");
-
-//connection?
+<!--THIS IS A FUNCTION NOW USE doLogin() INSTEAD -->
+<?php session_start();
+//connection
 $conn = mysqli_connect("localhost", "root", "root", "acetraining");
 
-// aunthenticate 
-$sql = ("SELECT * FROM user WHERE id = '$_POST[id]' AND password = '$_POST[password]' ");
+$ea = $_POST['email'];
+$pw = $_POST['password'];
 
-$resource = mysqli_query ($conn,$sql)
-or die(mysqli_error($conn));
-$record1 = mysqli_fetch_array ($resource);
+// aunthenticate 
+$sql = "SELECT * FROM users WHERE (email = '$ea' AND password = '$pw' )";
+
+$result = mysqli_query ($conn,$sql) or die(mysqli_error($conn));
+$record = mysqli_fetch_array ($result);
 
 // check id field is set
-if (!isset($record1['id'])) {
+if ($record['id'] == "") {
     echo ("Invalid LoginID or password");
 } else {
-    echo ("Welcome back" . $record1['forename'] );
+    echo ("Welcome, login ok");
+
+    if($record['authorised'] == 0) {
+        echo("account not yet authorised");
+    } else {
+    $_SESSION['userId'] = $record['id'];
+    $_SESSION['userType'] = $record['userType'];
+    }
 }
 ?>

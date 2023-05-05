@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -7,21 +8,19 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
-        <!--reusable header link-->
-        <script src="components/footer.js" type="text/javascript" defer></script>
-        <script src="components/tutor-navbar.js" type="text/javascript" defer></script>
         
     </head>
     <body>
         <!--<h1>Tutor Homepage</h1>-->
-            <header>
-                <a href="#">Ace</a>
-                <a class="split" href="#">LOG IN</a>
-                <a class="split" href="#">REGISTER</a>
-            </header>
+        <?php include('header.php'); ?>
 
+        
+        <?php 
+            include('checkTutor.php');
+            //showMenu();
+        ?>
             <!--nav bar, TODO: turn into php doc for reuse-->
-            <tutor-navbar-component></tutor-navbar-component>
+            <?php include('tutor-navbar.php'); ?>
 
         <!--dummy text-->
             <h1>Welcome Tutor</h1><hr>
@@ -43,8 +42,21 @@
                 <h3>And more probably!</h3>
             </div>
         </main>
-        <footer-component></footer-component>
-        
+        <div>
+            <?php include('footer.php'); ?>
+        </div>
         <script src="" async defer></script>
     </body>
 </html>
+
+
+<?php
+/*
+function showMenu() {
+    echo ("
+    <a href='addCourse.php' class='btn'>Add a course</a>
+    <br /><br />
+    ");
+}
+*/
+?>
