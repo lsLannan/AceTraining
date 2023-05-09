@@ -12,9 +12,6 @@
             <!--TODO: plan to replace with include login.php-->
             
         <h1>Hello</h1>   
-        <div class="hero">
-            <img src="https://cdn.pixabay.com/photo/2018/03/26/06/20/desktop-3261768_1280.jpg" alt="background">
-        </div>
 
             <?php include('components/footer.php'); ?>
         </main>

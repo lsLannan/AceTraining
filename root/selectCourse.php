@@ -1,4 +1,6 @@
 <!-- shows list of available courses, allows for enrollment-->
+<h1>Under construction</h1>
+<a href="students.php">Go back to student home</a>
 <?php
 function showCourses() {
     // db connection

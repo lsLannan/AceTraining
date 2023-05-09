@@ -15,16 +15,21 @@
         <?php include('components/tutor-navbar.php'); ?>
 
         <!--dummy text-->
-            <h1>Welcome Tutor</h1><hr>
+            <h1>Student Enrollment</h1><hr>
+
+            
 
             <div>
-                <h2>Student Enrollment</h2>
+
+                <h3>Which course are you enrolling for?</h3>
+                <!--drop down of courses? -->
+
                 <?php include('showStudents.php'); ?>
             </div>
         
         
 
-        <?php include('components/footer.php'); ?>
+         <?php include('components/footer.php'); ?>
 
         <script src="" async defer></script>
     </body>

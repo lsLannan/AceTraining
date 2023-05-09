@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!--start session-->
-
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -28,6 +26,9 @@
                 if($_SESSION['userType'] == "student") {
                     header('Location: students.php');
                 }
+                if($_SESSION['userType'] == "admin") {
+                    header('Location: admin.php');
+                }
             }
 
             ?>
@@ -46,22 +47,21 @@ function showLogin() {
     echo ("
     <h1>Login</h1>
     <div class='container'>
-        <div class='form-container'>
-            <form action='login.php' method='post'>
+            <form class='form' id='login-form' action='login.php' method='post'>
                 <label for='email' class='email-label'>Email: </label>
-                <input type='text' id='email' name='email' placeholder='email pls' required><br>
+                <input type='text' id='email' name='email' placeholder='name@email.co.uk' required><br><br>
 
                 <label for='password' class='password-label'>Password: </label>
-                <input type='text' id='password' name='password' placeholder='password pls' required><br>
+                <input type='text' id='password' name='password' placeholder='Password123' required><br><br>
 
-                <input type='submit' value='Submit'>
+                <input type='submit' value='Submit' id='submit-button'>
             </form>
-        </div>
     </div>
         ");
 }
 
 function doLogin() {
+
     // code
 //connection
 $conn = mysqli_connect("localhost", "root", "root", "acetraining");
@@ -79,6 +79,7 @@ $record = mysqli_fetch_array ($result);
 if ($record['id'] == "") {
     echo ("Invalid LoginID or password");
 } else {
+    session_start();
     echo ("Welcome, login ok");
 
     if($record['authorised'] == 0) {

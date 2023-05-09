@@ -14,10 +14,11 @@
     <?php include('components/header.php'); ?>
     <?php include('components/tutor-navbar.php'); ?>
 
-    <div class="container">
+    <h1>Add New Course</h1><hr>
+
 
     <?php
-    if(!isset($_POST[''])){
+    if(!isset($_POST['courseName'])){
         // showCourse function
         showCourse();
 
@@ -29,7 +30,7 @@
     ?>
 
     <?php include('components/footer.php'); ?>
-    </div>
+
         <script src="" async defer></script>
     </body>
 </html>
@@ -40,7 +41,7 @@
 function showCourse(){
     // code below
         echo("
-        <div class='form-container'>
+        <div class='container'>
                 <form id='course-form' action='addCourse.php' method='post'>
                     <label for='courseName' class='course-name-label'>Course Name: </label>
                     <input type='text' id='courseName' name='courseName' placeholder='Basic Rocket Science' required><br><br>

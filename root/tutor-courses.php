@@ -23,12 +23,14 @@
         
             <!--Uploading documents-->
             <h2>Uploading documents</h2>
+             
             <form method="post" action="addResource.php" enctype="multipart/form-data">
-                <label for="upload">Select a file:</label>
-                <input type="file" id="upload">
+                <label for="upload-file">Select a file:</label>
+                <input type="file" value="upload-file" id="upload-file">
 
                 <input type="submit" name="Submit">
             </form>
+
         </main>    
         <?php include('components/footer.php'); ?>
         <script src="" async defer></script>

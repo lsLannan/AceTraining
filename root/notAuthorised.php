@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html lang="en">
     <head>
         <title>Unauthorised</title>
@@ -11,9 +12,7 @@
         <main>
             
         <h1>Sorry, you are not authorised</h1>   
-        <div class="hero">
-            <img src="https://cdn.pixabay.com/photo/2018/03/26/06/20/desktop-3261768_1280.jpg" alt="background">
-        </div>
+
 
             <?php include('components/footer.php'); ?>
         </main>
