@@ -1,8 +1,10 @@
 * {
   box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 html {
+  background-color: whitesmoke;
   position: relative;
   height: 100%;
 }
@@ -10,35 +12,14 @@ html {
 body {
     background-color: whitesmoke;
     height: 100%;
-
     text-align: center;
-    font-family: sans-serif;
-
-    background-image: url(background.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 main {
     background-color: whitesmoke;
     width: 90%;
     margin: 0 5% 0 5%;
-}
-
-/*hero banner*/
-.hero {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.hero img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+    padding: 10px 20px;
 }
 
 img {
@@ -55,33 +36,6 @@ hr {
   border-top: 1px solid white;
   padding: 0;
 }
-
-/*TOP NAV BAR
-.topnav {
-    text-align: center;
-    overflow: hidden;
-    background-color: aquamarine;
-    padding: 0 40px 4px 40px;
-    text-decoration: none;
-}
-
-.topnav a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 0 14px 0 20px;
-    text-decoration: none;
-    float: left;
-  }
-
-  .topnav a:hover{
-    background-color: teal;
-  }
-
-  .topnav a:active{
-    background-color: teal;
-  }
-  */
 
   ul {
     list-style-type: none;
@@ -105,6 +59,14 @@ hr {
 
   li a:hover{
     background-color: teal;
+  }
+
+  #home-link:hover {
+    background-color: aquamarine;
+  }
+
+  header a:link {
+    text-decoration: none;
   }
 
 /*log in button seperate from rest nav bar*/
@@ -134,14 +96,54 @@ div.center {
   }
 */
 
-div.container{
-    box-sizing: border-box;
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 25px;
     background-color: aquamarine;
-    margin: auto;
+    margin: 5%;
     padding: 10px;
-    align-items: center;
-    width: 60%;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 400px;
+}
+
+form{
+  width: 300px;
+  height: 100px;
+  align-self: center;
+}
+
+.form{
+  align-self: center;
+}
+
+label {
+  float: left;
+}
+
+input {
+  float: right;
+  border: none;
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+}
+
+#submit-button {
+  float:none;
+  width: 100%;
+  background-color: teal;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 div.login-form-container-container{
@@ -154,7 +156,7 @@ div.login-form-container-container{
   align-items: center;
 }
 
-  div.form-container{
+form-container{
     box-sizing: content-box;
     border-radius: 25px;
     background-color: teal;
@@ -164,6 +166,7 @@ div.login-form-container-container{
     width: 60%;
     align-items: center;
   }
+
 /*
   div.register-form-container{
     box-sizing: content-box;
@@ -177,13 +180,16 @@ div.login-form-container-container{
 */
 
   footer {
+    /* TODO: footer currently covers the bottom of screen  */
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 10%;
+    height: 100%;
+    max-height: 100px;
     background-color: aquamarine;
     color: black;
     text-align: center;
     overflow: hidden;
+    border-bottom: 2px solid black;
   }
