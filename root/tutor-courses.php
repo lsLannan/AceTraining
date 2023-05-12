@@ -7,6 +7,7 @@
         <title>Tutor Courses</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
 
     </head>
@@ -25,6 +26,7 @@
             <h2>Uploading documents</h2>
              
             <form method="post" action="addResource.php" enctype="multipart/form-data">
+                
                 <label for="upload-file">Select a file:</label>
                 <input type="file" value="upload-file" id="upload-file">
 
