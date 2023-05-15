@@ -3,8 +3,8 @@ session_start();
 
 $conn = mysqli_connect("localhost","root","root","acetraining");
 
-//$cId = $_POST['course'];
-$cId = 103;
+$cId = $_POST['course'];
+//$cId = 103;
 $tId = $_SESSION['userId'];
 $students = "";
 

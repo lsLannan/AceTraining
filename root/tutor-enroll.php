@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php session_start(); ?>
+<!--removed session start here-->
 <html lang="en">
     <head>
         <meta charset="utf-8">
