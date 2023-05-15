@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ace Training | Student | Courses</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="styles.css" />
+        <script src="studentcourses.js" async></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="main-nav nav">
+                <ul>
+                    <li><a href="studenthome.html">HOME</a></li>
+                    <li><a href="studentcourses.html">COURSES</a></li>
+                    <li><a href="studentresources.html">RESOURCES</a></li>
+                    <li><a href="studentgrades.html">GRADES</a></li>
+                </ul>
+            </nav>
+            <!---<img class="center" src="Images/logo.png">--->
+            <h1 class="band-name band-name-large">Hi</h1>
+        </header>
+        <section class="container content-section">
+            <h2 class="section-header">Courses</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <img class="shop-item-image" src="Images/tiara.PNG">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">£45673.42</span>
+                        <button class="btn btn-primary shop-item-button" type="button">IT and Multimedia Development (Core 1) (2022/3)</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Royal Blue Egg Drop Earrings</span>
+                    <img class="shop-item-image" src="Images/earrings.PNG">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">£10560</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Diamond Platinum Necklace</span>
+                    <img class="shop-item-image" src="Images/necklace1.PNG">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">£392376.22</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Emerald Pendant Necklace</span>
+                    <img class="shop-item-image" src="Images/necklace2.PNG">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">£1370202.67</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>  
+                <div class="shop-item">
+                    <span class="shop-item-title">Pink Diamonds Bracelet</span>
+                    <img class="shop-item-image" src="Images/bracelet.PNG">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">£88000.00</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Oval Blue Sapphire Ring</span>
+                    <img class="shop-item-image" src="Images/ring.PNG">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">£43622.00</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="band-name">Ace Training</h3>
+            </div>
+        </footer>
+    </body>
+</html>
