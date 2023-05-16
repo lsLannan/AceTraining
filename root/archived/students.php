@@ -1,3 +1,5 @@
+<!--THIS PAGE IS NOT IN USE, NOW LINKED TO SABRINAS CODE-->
+
 <!DOCTYPE html>
 <?php session_start(); ?>
 <html>
@@ -6,6 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Student Home</title>
         <meta name="description" content="">
+         <meta name="author" content="LibertyL">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
         

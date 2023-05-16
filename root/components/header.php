@@ -2,7 +2,8 @@
     <ul>
         <li><a id="home-link" href="index.php">Ace Training</a></li>
         <li><a href="tutor-home.php">Tutor Page</a></li>
-	    <li><a href="students.php">Student Page</a></li>
+        <!--link to sabrina-->
+	    <li><a href="me/studenthome.html">Student Page</a></li>
     </ul>
 
     <?php

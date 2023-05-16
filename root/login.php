@@ -6,7 +6,7 @@
         <title>Login</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="liberty">
+        <meta name="author" content="LibertyL">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
@@ -24,7 +24,8 @@
                     header('Location: tutor-home.php');
                 }
                 if($_SESSION['userType'] == "student") {
-                    header('Location: students.php');
+                    //edit: links to sabrinas code now
+                    header('Location: me/studenthome.html');
                 }
                 if($_SESSION['userType'] == "admin") {
                     header('Location: admin.php');

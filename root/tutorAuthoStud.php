@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
     <head>
         <title>Authorise</title>
-        <meta name="author" content="21011806@hope.ac.uk">
+        <meta name="author" content="LibertyL">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
@@ -28,20 +28,21 @@ session_start();
 
                     <!--returns course that belong to the tutor-->
                     <?php 
+
                     if (!isset($_POST['studentID'])) 
                     {
                         if (!isset($_POST['courseId'])) 
                         {
-                        getCourses();
+                            getCourses();
                         } 
                         else 
                         {
-                        getStudentTakingCourse();
+                            getStudentTakingCourse();
                         }
                     }
                     else 
                     {
-                    enrollStudents();
+                        enrollStudents();
                     }
                       
 
@@ -56,9 +57,9 @@ session_start();
 <?php
 
 function getCourses() {
-    echo("TEST: GETCOURSE\n");
+    //echo("TEST: GETCOURSE\n");
     // get courses that belong to logged in tutor
-    $userID = $_SESSION['userID'];
+    $userID = $_SESSION['userId'];
 
     // select all courses
     // added *
@@ -72,33 +73,31 @@ function getCourses() {
 }//end of getCourses
 
 function showCourses($resource){
-    echo("TEST: SHOWCOURSES\n");
+    //echo("TEST: SHOWCOURSES\n");
     // show courses n allow tutor to select
+
+    // start form
     echo("<form name='showCourses' method='POST' action='tutorAuthoStud.php'>
             <select name='courseId' required autofocus > ");
 
             while ($currentLine = mysqli_fetch_array($resource)) 
-            {
-                echo ("<option value='$currentLine[courseId]'>$currentLine[courseName]</option> ");
-
+                {
+                //echo ("<option value='$currentLine[courseId]'>$currentLine[courseName]</option> ");
+                echo ("<option value='$currentLine[courseId]'>$currentLine[name]</option> ");
+                }
                 
-                echo ("
-                </select>
-                <input type='submit' onclick='onclick' />
-                </form>
-                ");
-                
-            }
-            echo ("</select>
-            <input type='submit' onclick='onclick' />
-            </form>");
+                echo ("</select>
+                       <input type='submit' onclick='onclick' />
+                 </form>   
+                    ");
+              
 }
 
 
 //moved doSQL
 
 function getStudentTakingCourse() {
-    echo("TEST: GETSTUDENTTAKINGCOURSE\n");
+    //echo("TEST: GETSTUDENTTAKINGCOURSE\n");
     // takes posted value from showCourse form, places in local variable 
     $courseId = $_POST['courseId'];
 
@@ -112,14 +111,15 @@ function getStudentTakingCourse() {
 }
 
 function getStudentDetails($resource) {
-    echo("TEST: GETSTUDENTDETAILS\n");
+    //echo("TEST: GETSTUDENTDETAILS\n");
 
     // fetch user details from table using id
     $sql = "SELECT id, forename, surname FROM users WHERE ";
 
     while ($currentLine = mysqli_fetch_array($resource)) 
     {
-        $sql .= "userID = '$currentLine[id]' OR ";
+        // concanates the sql statement for each user
+        $sql .= "id = '$currentLine[id]' OR ";
     }
     $sql = rtrim($sql, " OR ");
 
@@ -130,44 +130,44 @@ function getStudentDetails($resource) {
 }
 
 function showStudents($resource) {
-    echo ("TEST: SHOWSTUDENTS\n");
+    //echo ("TEST: SHOWSTUDENTS\n");
 
     $courseId = $_POST['courseId'];
 
     echo ("<form name='showStudents' method='POST' action='tutorAuthoStud.php'>");
     echo ("<input type='hidden' name='courseId' value='$courseId' /> ");
 
-    while($currentLine = mysqli_fetch_array($resource)) 
+    while ($currentLine = mysqli_fetch_array($resource)) 
         {
-            echo ("<input type='checkbox' name='studentID[] value='$currentLine[id]' />");
-            echo ($currentLine['userForename'] . ' ' . $currentLine['userForename'] . '<br />');
+            echo ("<input type='checkbox' name='studentID[]' value='$currentLine[id]' />");
+            echo ($currentLine['forename'] . ' ' . $currentLine['surname'] . '<br />');
         }
     echo ("<br /><input type='submit' onclick='submit' />
     </form>");
 }//eof
 
 function enrollStudents() {
-    echo ("TEST: ENROLLSTUDENTS\n");
+    //echo ("TEST: ENROLLSTUDENTS\n");
 
     $courseId = $_POST['courseId'];
 
-    foreach ($_POST['studentID'] as $id) 
+    foreach ($_POST['studentID'] as $userID) 
     {
-        $sql = "UPDATE studenttaking SET authorised = 1 WHERE
-        id = $id AND courseId = $courseId";
+        //$sql = "UPDATE studenttaking SET authorised = 1 WHERE id = $userID AND courseId = $courseId";
+        $sql = "UPDATE studenttaking SET authorised = 1 WHERE id = $userID AND courseId = $courseId";
         doSQL($sql);
     }
 }
 
 function doSQL($sql) {
-    echo("TEST: DOSQL\n");
+    //echo("TEST: DOSQL\n");
     //smt going wrong here
     echo ("<p> SQL QUERY: <pre>" . $sql . "</pre></p>");
     // db connection
     $conn = mysqli_connect("localhost","root","root", "acetraining");
 
-    $resource  = mysqli_query($conn, $sql);
-    if ($resource) 
+    //$resource  = mysqli_query($conn, $sql);
+    if ($resource = mysqli_query($conn, $sql)) 
     {
         echo("<p> style='color:green'>SUCCESS</p>");
         return $resource;

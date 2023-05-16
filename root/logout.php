@@ -8,6 +8,7 @@ session_destroy();
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Bye</title>
         <meta name="description" content="">
+         <meta name="author" content="LibertyL">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
     </head>

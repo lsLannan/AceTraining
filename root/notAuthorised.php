@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <title>Unauthorised</title>
-        <meta name="author" content="21011806@hope.ac.uk">
+        <meta name="author" content="LibertyL">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>

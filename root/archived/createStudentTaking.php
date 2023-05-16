@@ -16,8 +16,6 @@ CREATE TABLE studenttaking (
     )
     ";
 
-
-
-
+    mysqli_query($conn, $sql);
 
 ?>
