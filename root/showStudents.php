@@ -1,4 +1,7 @@
 <?php
+/*
+ * @author LibertyL
+*/
 session_start();
 
 $conn = mysqli_connect("localhost","root","root","acetraining");

@@ -1,5 +1,9 @@
 <!--THIS IS A FUNCTION NOW USE doLogin() INSTEAD -->
 <?php session_start();
+/*
+* @author LibertyL
+*/
+
 //connection
 $conn = mysqli_connect("localhost", "root", "root", "acetraining");
 

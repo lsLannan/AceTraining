@@ -1,4 +1,7 @@
 <?php
+/*
+ * @author LibertyL
+*/
 
 include('checkStudent.php');
 

@@ -1,6 +1,10 @@
 <!--NPT NEEDED-->
 <?php
 
+/*
+* @author LibertyL
+*/
+
 // store n test the connection
 $conn = mysqli_connect("localhost","root","root", "acetraining") or die(mysqli_error($conn));
 

@@ -4,6 +4,7 @@
     <head>
         <title>MySQL Register</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <meta name="author" content="LibertyL">
     </head>
     <body>
         <div class="login-form-container-container">

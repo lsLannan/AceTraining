@@ -2,6 +2,9 @@
 <h1>Under construction</h1>
 <a href="students.php">Go back to student home</a>
 <?php
+/*
+ * @author LibertyL
+*/
 function showCourses() {
     // db connection
     $conn = mysqli_connect("localhost","root","root","acetraining");

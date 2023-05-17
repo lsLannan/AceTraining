@@ -1,5 +1,9 @@
 <!--THIS IS A FUNCTION NOW USE doRegister() INSTEAD-->
 <?php
+/*
+* @author LibertyL
+*/
+
 echo ($_POST['forename'] . "<br />");
 echo ($_POST['surname'] . "<br />");
 echo ($_POST['email'] . "<br />");
