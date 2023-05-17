@@ -4,7 +4,7 @@
 // specifies directory
 $target_dir = "resources/";
 // specifies the path 
-$target_file = $target_dir . basename($_FILES["upload-file"]["name"]);
+$target_file = $target_dir . basename($_FILES["upload-file"]["file-name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
@@ -14,14 +14,16 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
     $uploadOk = 0;
   }
 
+//
+
 // connection
 $conn = mysqli_connect("localhost","root","root","acetraining");
 
-$name = $_POST[''];
-$from = $_POST[''];
-$until = $_POST[''];
-$ow = $SESSION['userId'];
-$file = $_POST['']; 
+$name = $_POST['file-name'];
+$from = $_POST['date-from'];
+$until = $_POST['date-until'];
+$ow = $SESSION['userId']; // tutor that is logged in is owner 
+$file = $_POST[$target_file]; 
 
 
 

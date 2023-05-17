@@ -1,5 +1,5 @@
 <?php 
-session_destroy();
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,6 +18,7 @@ session_destroy();
 
         <div>
             <p>You have been logged out</p>
+            <?php session_destroy(); ?>
         </div>
 
         <?php include('components/footer.php'); ?>

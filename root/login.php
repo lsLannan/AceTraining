@@ -10,9 +10,11 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
+    <div>
         <?php include ('components/header.php'); ?>
         
-        
+        <div class="container">
+        <!--<div>-->
             <?php
             if (!isset($_POST['email'])) {
                 // showLogin
@@ -33,10 +35,14 @@
             }
 
             ?>
+        </div>
+        <!--</div>-->
         
 
         <?php include('components/footer.php'); ?>
         <script src="" async defer></script>
+
+    </div>
     </body>
 </html>
 
@@ -47,16 +53,18 @@ function showLogin() {
     // code
     echo ("
     <h1>Login</h1>
-    <div class='container'>
-            <form class='form' id='login-form' action='login.php' method='post'>
-                <label for='email' class='email-label'>Email: </label>
-                <input type='text' id='email' name='email' placeholder='name@email.co.uk' required><br><br>
+    
+        <div class='item'>
+                <form class='form' id='login-form' action='login.php' method='post'>
+                    <label for='email' class='email-label'>Email: </label>
+                    <input type='text' id='email' name='email' placeholder='name@email.co.uk' required><br><br>
 
-                <label for='password' class='password-label'>Password: </label>
-                <input type='text' id='password' name='password' placeholder='Password123' required><br><br>
+                    <label for='password' class='password-label'>Password: </label>
+                    <input type='text' id='password' name='password' placeholder='Password123' required><br><br>
 
-                <input type='submit' value='Submit' id='submit-button'>
-            </form>
+                    <input type='submit' value='Submit' id='submit-button'>
+                </form>
+        
     </div>
         ");
 }

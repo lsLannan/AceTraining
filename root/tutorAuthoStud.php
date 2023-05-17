@@ -26,27 +26,31 @@ session_start();
             <h1>Authorise Students</h1><hr>
             <p>Authroise your students based on course</p>
 
-                    <!--returns course that belong to the tutor-->
-                    <?php 
+            <div class="container">
+                <div class='item'>
+                        <!--returns course that belong to the tutor-->
+                        <?php 
 
-                    if (!isset($_POST['studentID'])) 
-                    {
-                        if (!isset($_POST['courseId'])) 
+                        if (!isset($_POST['studentID'])) 
                         {
-                            getCourses();
-                        } 
+                            if (!isset($_POST['courseId'])) 
+                            {
+                                getCourses();
+                            } 
+                            else 
+                            {
+                                getStudentTakingCourse();
+                            }
+                        }
                         else 
                         {
-                            getStudentTakingCourse();
+                            enrollStudents();
                         }
-                    }
-                    else 
-                    {
-                        enrollStudents();
-                    }
                       
 
-                    ?>
+                        ?>
+                </div>
+            </div>
         <?php include('components/footer.php'); ?>
         </div>
     </body>
@@ -160,21 +164,21 @@ function enrollStudents() {
 }
 
 function doSQL($sql) {
-    //echo("TEST: DOSQL\n");
-    //smt going wrong here
+    /*
     echo ("<p> SQL QUERY: <pre>" . $sql . "</pre></p>");
+    */
     // db connection
     $conn = mysqli_connect("localhost","root","root", "acetraining");
 
     //$resource  = mysqli_query($conn, $sql);
     if ($resource = mysqli_query($conn, $sql)) 
     {
-        echo("<p> style='color:green'>SUCCESS</p>");
+        //echo("<p>SUCCESS</p>");
         return $resource;
     } 
     else 
     {
-        echo ("<p style='color:red'>FAIL: ");
+        echo ("<p>ERROR: ");
         echo (mysqli_error($conn) . "</p>");
         return false;
     }

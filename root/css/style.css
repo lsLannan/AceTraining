@@ -7,19 +7,25 @@ html {
   background-color: whitesmoke;
   position: relative;
   height: 100%;
+  min-height: 100%;
 }
 
 body {
     background-color: whitesmoke;
     height: 100%;
+    width: 100%;
     text-align: center;
 }
 
+
 main {
     background-color: whitesmoke;
-    width: 90%;
+    width: 100%;
+    /*
     margin: 0 5% 0 5%;
     padding: 10px 20px;
+        background-color: pink;
+        */
 }
 
 img {
@@ -37,13 +43,13 @@ hr {
   padding: 0;
 }
 
-  ul {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: aquamarine;
-  }
+    background-color: #a0d2eb;
+}
 
   li {
     float: left;
@@ -57,13 +63,13 @@ hr {
     text-decoration: none;
   }
 
-  li a:hover{
-    background-color: teal;
-  }
+    li a:hover {
+        background-color: #9facea;
+    }
 
-  #home-link:hover {
-    background-color: aquamarine;
-  }
+#home-link:hover {
+    background-color: #a0d2eb;
+}
 
   header a:link {
     text-decoration: none;
@@ -74,14 +80,14 @@ hr {
     float: right;
 }
 
-  header {
+header {
     box-sizing: content-box;
     text-align: center;
     overflow: hidden;
-    background-color: aquamarine;
+    background-color: #a0d2eb;
     padding: 0 0 0 0;
     margin-top: 0;
-  }
+}
 
   p.split {
     float: right;
@@ -96,31 +102,63 @@ div.center {
   }
 */
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
+    align-self: center;
     align-items: center;
     justify-content: center;
-    border-radius: 25px;
-    background-color: aquamarine;
-    margin: 5%;
-    padding: 10px;
+    /*
+    border-radius: 20px;
+    background-color: #a0d2eb;
+    background-color: pink;
+     */
+    margin: 0%;
+    padding: 0px;
     gap: 20px;
     width: 100%;
-    max-width: 600px;
+    height: 60%;
+    /*max-height: fit-content;*/
+}
+
+div .item {
+    align-self: center;
+    margin: 3%;
     height: 100%;
-    max-height: 400px;
+    width: fit-content;
+    padding: 5%;
+    background-color: #a0d2eb;
+    border-radius: 20px;
 }
 
-form{
-  width: 300px;
-  height: 100px;
-  align-self: center;
+div .info-item {
+    align-self: center;
+    margin: 3%;
+    height: 100%;
+    width: 75%;
+    padding: 2%;
+    border-radius: 20px;
 }
 
-.form{
-  align-self: center;
+div .form {
+    align-self: center;
+    margin: 5%;
+    height: 100%;
+    width: 400px;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: #a0d2eb;
 }
+
+/*div .form {
+    width: fit-content;
+    height: fit-content;
+    padding: 5%;
+    align-self: center;
+    background-color: #a0d2eb;
+    border-radius: 20px;
+}*/
+
 
 label {
   float: left;
@@ -135,37 +173,51 @@ input {
 }
 
 #submit-button {
-  float:none;
-  width: 100%;
-  background-color: teal;
-  border: none;
-  color: white;
-  padding: 10px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
+    float: none;
+    width: 100%;
+    background-color: #9facea;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
-div.login-form-container-container{
-  box-sizing: border-box;
-  border-radius: 25px;
-  background-color: aquamarine;
-  margin: auto;
-  width: 60%;
-  padding: 10px;
-  align-items: center;
-}
-
-form-container{
-    box-sizing: content-box;
+/*
+div.login-form-container-container {
+    box-sizing: border-box;
     border-radius: 25px;
-    background-color: teal;
+    background-color: #a0d2eb;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    align-items: center;
+}
+*/
+
+.btn {
+    background-color: #9facea;
+    width: 95%;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px;
+    cursor: pointer;
+}
+
+form-container {
+    /*box-sizing: content-box;*/
+    display: flex;
+    border-radius: 25px;
+    background-color: #9facea;
     border: 2px solid white;
     margin: auto;
     padding: 10px;
     width: 60%;
     align-items: center;
-  }
+}
 
 /*
   div.register-form-container{
@@ -179,17 +231,22 @@ form-container{
   }
 */
 
-  footer {
+footer {
     /* TODO: footer currently covers the bottom of screen  */
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 100%;
-    max-height: 100px;
-    background-color: aquamarine;
-    color: black;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #494D5F;
+    color: white;
     text-align: center;
     overflow: hidden;
-    border-bottom: 2px solid black;
-  }
+    /*border-bottom: 2px solid black;*/
+    padding: 5px 0 0 0;
+}
+
+footer a {
+    color: white;
+}

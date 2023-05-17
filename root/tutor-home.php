@@ -25,8 +25,8 @@
 
         <!--dummy text-->
             <h1>Welcome Tutor</h1><hr>
-        <main>
-            <div class="info">
+        <div class="container">
+            <div class="info-item">
                 <h2>Welcome to Ace Training</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam nisi, accusamus consequuntur vitae sunt exercitationem porro id, fugit eum laborum nemo quia. Dolore autem architecto voluptatibus illum perspiciatis, quas nisi.</p>
             
@@ -42,7 +42,7 @@
             
                 <h3>And more probably!</h3>
             </div>
-        </main>
+        </div>
         <div>
             <?php include('components/footer.php'); ?>
         </div>
