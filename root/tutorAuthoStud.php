@@ -5,7 +5,8 @@ session_start();
 ?>
 <html lang="en">
     <head>
-        <title>Authorise</title>
+        <title>Enroll</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <meta name="author" content="LibertyL">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -23,8 +24,8 @@ session_start();
             include('checkTutor.php');
             ?>
 
-            <h1>Authorise Students</h1><hr>
-            <p>Authroise your students based on course</p>
+            <h1>Student Enrollment</h1><hr>
+            <p>Authorise your student's enrollment based on course</p>
 
             <div class="container">
                 <div class='item'>
@@ -49,6 +50,15 @@ session_start();
                       
 
                         ?>
+                </div>
+            </div>
+
+            <p>Enroll Student Manually</p><hr>
+            <div class="container">
+                <div class="item">
+                    
+                    <?php //include('tutorAddStud.php'); ?>
+                    <button id="submit-button"><a href="tutorAddStud.php"><p>Enroll Student Manually</p></a></button>
                 </div>
             </div>
         <?php include('components/footer.php'); ?>
@@ -91,7 +101,7 @@ function showCourses($resource){
                 }
                 
                 echo ("</select>
-                       <input type='submit' onclick='onclick' />
+                       <input type='submit' onclick='onclick' value='Select Course' />
                  </form>   
                     ");
               
@@ -146,7 +156,7 @@ function showStudents($resource) {
             echo ("<input type='checkbox' name='studentID[]' value='$currentLine[id]' />");
             echo ($currentLine['forename'] . ' ' . $currentLine['surname'] . '<br />');
         }
-    echo ("<br /><input type='submit' onclick='submit' />
+    echo ("<br /><input type='submit' onclick='submit' value='Confirm Selection'/>
     </form>");
 }//eof
 

@@ -17,9 +17,9 @@
         <li><a href="tutor-home.php">HOME</a></li>
 
         <li><a href="tutor-courses.php">COURSES</a></li> 
-        <li><a href="tutor-enroll.php">ENROLL</a></li>
+        <li><a href="tutor-enroll.php">AUTHORISE</a></li>
         <li><a href="tutor-records.php">RECORDS</a></li>
         <!--<li><a href="index.php" class="split">LOG OUT</a></li>-->
-        <li><a href="tutorAuthoStud.php">AUTHORISE</a></li>
+        <li><a href="tutorAuthoStud.php">ENROLL</a></li>
     </ul>
 </nav>

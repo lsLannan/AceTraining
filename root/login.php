@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Login</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="LibertyL">
@@ -52,7 +53,7 @@
 function showLogin() {
     // code
     echo ("
-    <h1>Login</h1>
+    <br><br><br><h1>Login</h1>
     
         <div class='item'>
                 <form class='form' id='login-form' action='login.php' method='post'>

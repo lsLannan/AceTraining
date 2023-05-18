@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\root",
+    "\\root\\components",
+    "\\root\\css",
+    "\\root\\images",
+    "\\root\\me"
   ],
-  "SelectedNode": "\\C:\\UniServerZ\\www\\liberty\\AceTraining",
+  "SelectedNode": "\\root\\login.php",
   "PreviewInSolutionExplorer": false
 }

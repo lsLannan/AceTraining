@@ -1,13 +1,15 @@
 * {
-  box-sizing: border-box;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  background-color: whitesmoke;
-  position: relative;
-  height: 100%;
-  min-height: 100%;
+    background-color: whitesmoke;
+    position: relative;
+    height: 100%;
+    min-height: 100%;
 }
 
 body {
@@ -29,19 +31,21 @@ main {
 }
 
 img {
-  display: inline-block;
+    display: inline-block;
+    margin: 0;
+    height: 450px;
+    width: 550px;
 }
+
+
 
 hr {
-  border-top: 2px solid black;
-  width: 50%;
+    align-content: center;
+    border-top: 2px solid black;
+    width: 50%;
+    margin: 1% 25% 0 25%;
 }
 
-.footer-hr {
-  width: 50%;
-  border-top: 1px solid white;
-  padding: 0;
-}
 
 ul {
     list-style-type: none;
@@ -51,29 +55,33 @@ ul {
     background-color: #a0d2eb;
 }
 
-  li {
+li {
     float: left;
-  }
+}
 
-  li a {
+a {
+    text-decoration: none;
+}
+
+li a {
     display: block;
     color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
+}
 
-    li a:hover {
-        background-color: #9facea;
-    }
+li a:hover {
+    background-color: #9facea;
+}
 
 #home-link:hover {
     background-color: #a0d2eb;
 }
 
-  header a:link {
+header a:link {
     text-decoration: none;
-  }
+}
 
 /*log in button seperate from rest nav bar*/
 .split {
@@ -81,19 +89,16 @@ ul {
 }
 
 header {
-    box-sizing: content-box;
     text-align: center;
     overflow: hidden;
     background-color: #a0d2eb;
-    padding: 0 0 0 0;
-    margin-top: 0;
 }
 
-  p.split {
+p.split {
     float: right;
-  }
+}
 
-  /*
+/*
 div.center {
     margin: auto;
     width: 60%;
@@ -121,6 +126,19 @@ div.center {
     /*max-height: fit-content;*/
 }
 
+.container-row {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0%;
+    padding: 0px;
+    gap: 20px;
+    width: 100%;
+    height: 60%;
+}
+
 div .item {
     align-self: center;
     margin: 3%;
@@ -131,14 +149,16 @@ div .item {
     border-radius: 20px;
 }
 
-div .info-item {
+.info-item {
     align-self: center;
-    margin: 3%;
+    margin: 5% 5% 15% 5%;
     height: 100%;
-    width: 75%;
-    padding: 2%;
+    width: fit-content;
+    padding: 2% 20% 2% 20%;
     border-radius: 20px;
+    /*background-color: pink;*/
 }
+
 
 div .form {
     align-self: center;
@@ -161,15 +181,15 @@ div .form {
 
 
 label {
-  float: left;
+    float: left;
 }
 
 input {
-  float: right;
-  border: none;
-  width: 100%;
-  margin: 5px;
-  padding: 5px;
+    float: right;
+    border: none;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
 }
 
 #submit-button {
@@ -233,7 +253,7 @@ form-container {
 
 footer {
     /* TODO: footer currently covers the bottom of screen  */
-    position: fixed;
+    position: fixed; 
     left: 0;
     bottom: 0;
     width: 100%;
@@ -244,9 +264,17 @@ footer {
     text-align: center;
     overflow: hidden;
     /*border-bottom: 2px solid black;*/
-    padding: 5px 0 0 0;
+    padding: 15px 0 0 0;
+}
+
+.footer-hr {
+    text-align: center;
+    width: 50%;
+    border-top: 1px solid white;
+    padding: 0;
 }
 
 footer a {
     color: white;
+    text-decoration: none;
 }
