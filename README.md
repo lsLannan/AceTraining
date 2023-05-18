@@ -1,6 +1,7 @@
 # AceTraining
 
-#Satisfactory Website
+# Satisfactory Website
+
 Ace Training requires a new system for students that **enrol onto their courses**. There are three user types: Student, Tutor and Admin. All three can enrol
 themselves, but **students require authorisation from a tutor** before they are fully registered. **All user types log in using the same form**. (It is possible that
 tutors might need authorisation by the admin.)
