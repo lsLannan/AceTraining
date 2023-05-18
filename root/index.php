@@ -19,6 +19,8 @@
                 <img src="images/laptop-640.png" alt="lamp, plant and laptop on desk">
         </div>
 
+        <?php include('components/rightNav.php'); ?>
+
         <?php include('components/footer.php'); ?>
         </main>
         

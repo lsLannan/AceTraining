@@ -4,22 +4,21 @@
 */
 
 // store n test the connection
-$conn = mysqli_connect("localhost","root","root", "acetraining") or die(mysqli_error($conn));
+$conn = mysqli_connect("localhost","root","root");
 
-// create table
-$sql = ("
-    CREATE TABLE users (
-    id INT AUTO_INCREMENT,
-    forename VARCHAR(30) NOT NULL,
-    surname VARCHAR(30) NOT NULL,
-    email VARCHAR(30) NOT NULL,
-    password VARCHAR(30) NOT NULL,
-    userType VARCHAR(15) NOT NULL,
-    authorised BOOLEAN,
-    PRIMARY KEY(id)
-    )");
+$sql = "CREATE DATABASE acetraining";
 
-    mysqli_query($conn, $sql);
+echo ("<p>SQL QUERY: <pre>" . $sql . "</pre></p>");
 
+if (mysqli_query($conn, $sql)) 
+    {
+        echo("<p style='color:green'>SUCCESS</p>");
+    } 
+else 
+    {
+        echo ("<p style='color:red'>FAIL: ");
+        echo (mysqli_error($conn) . "</p>");
+    }
+  
 
 ?>

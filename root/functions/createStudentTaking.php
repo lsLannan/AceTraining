@@ -11,12 +11,12 @@ $conn = mysqli_connect("localhost","root","root", "acetraining") or die(mysqli_e
 $sql = "
 CREATE TABLE studentTaking (
     courseId INT NOT NULL,
-    userId INT NOT NULL,
+    id INT NOT NULL,
     dateRegistered DATE NOT NULL,
     authorised BOOLEAN,
     FOREIGN KEY (courseId) REFERENCES course(courseId)
     ON UPDATE CASCADE ON DELETE RESTRICT,
-    FOREIGN KEY (userId) REFERENCES user(userId)
+    FOREIGN KEY (id) REFERENCES users(id)
     ON UPDATE CASCADE ON DELETE RESTRICT
 )
 ";

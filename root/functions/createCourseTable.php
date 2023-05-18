@@ -17,6 +17,14 @@ CREATE TABLE course (
     PRIMARY KEY(courseId)
     )";
 
-    mysqli_query($conn, $sql);
+if (mysqli_query($conn, $sql)) 
+    {
+        echo("<p style='color:green'>SUCCESS</p>");
+    } 
+else 
+    {
+        echo ("<p style='color:red'>FAIL: ");
+        echo (mysqli_error($conn) . "</p>");
+    }
 
 ?>
