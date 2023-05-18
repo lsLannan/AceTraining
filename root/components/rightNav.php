@@ -1,8 +1,8 @@
 <div class="col c2">
 	<h3>Database: </h3>
-		</p><a href="functions/createDatabase.php">Create Database</a><br />
-		<a href="functions/createResourceTable.php">Create Resource Table</a><br />
-		<a href="functions/createUserTable.php">Create User Table</a><br />
-		<a href="functions/createCourseTable.php">Create Course Table</a><br />
-		<a href="functions/createStudentTaking.php">Create Student Taking Table</a><br /></p>
+		</p><a href="functions/createDatabase.php">1 Create Database</a><br />
+		<a href="functions/createUserTable.php">2 Create users Table</a><br />
+		<a href="functions/createCourseTable.php">3 Create course Table</a><br />
+		<a href="functions/createStudentTaking.php">4 Create studenttaking Table</a><br />
+		<a href="functions/createResourceTable.php"> 5Create resource Table</a><br /></p>
 </div>
