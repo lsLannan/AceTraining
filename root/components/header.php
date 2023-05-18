@@ -22,4 +22,6 @@
             ");
         }
     ?>
+
+    <?php include('components/rightNav.php'); ?>
 </header>
