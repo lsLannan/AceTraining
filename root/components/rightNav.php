@@ -1,3 +1,25 @@
+<style> 
+.sidenav {
+    height: 75%;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #494D5F;
+    overflow-x: hidden;
+    padding-top: 50px;
+    margin-top: 30%;
+}
+    .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    }
+    </style>
+
 <nav class="nav">
 	<!--<br><h3>Database: </h3>-->
 	<ul>
