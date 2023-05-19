@@ -1,210 +1,560 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.google.com/specimen/Belleza?query=belleza");
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/Belleza-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
 }
 
-html {
-    background-color: whitesmoke;
-    position: relative;
-    height: 100%;
+* {
+    box-sizing: border-box;
+    font-family: Belleza;
+    color: black;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
     min-height: 100%;
 }
 
-body {
-    background-color: whitesmoke;
-    height: 100%;
-    width: 100%;
-    text-align: center;
+.nav ul {
+    margin: 0;
 }
 
-
-main {
-    background-color: whitesmoke;
-    width: 100%;
-    /*
-    margin: 0 5% 0 5%;
-    padding: 10px 20px;
-        background-color: pink;
-        */
+.nav li {
+    display: inline;
 }
 
-img {
+.nav a {
     display: inline-block;
-    margin: 0;
-    height: 450px;
-    width: 550px;
-}
-
-
-
-hr {
-    align-content: center;
-    border-top: 2px solid black;
-    width: 50%;
-    margin: 1% 25% 0 25%;
-}
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #a0d2eb;
-}
-
-li {
-    float: left;
-}
-
-a {
+    padding: .5em;
+    color: white;
     text-decoration: none;
 }
 
-li a {
-    display: block;
-    color: black;
+.main-nav {
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid #a0d2eb;
+}-->
+
+.main-nav li {
+    padding: 0 5%;
 }
 
-li a:hover {
-    background-color: #9facea;
+.nav a:hover {
+    background-color: #494D5F;
 }
 
-#home-link:hover {
+.main-header {
     background-color: #a0d2eb;
+    background-image: url("Images/Header Background.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
 }
 
-header a:link {
-    text-decoration: none;
-}
-
-/*log in button seperate from rest nav bar*/
-.split {
-    float: right;
-}
-
-header {
+.band-name {
     text-align: center;
-    overflow: hidden;
-    background-color: #a0d2eb;
+    margin: 0;
+    font-size: 2em;
+    font-family: "Belleza-Regular";
+    font-weight: normal;
+    color: white;
 }
 
-p.split {
-    float: right;
+.band-name-large {
+    font-size: 4em;
 }
 
-/*
-div.center {
-    margin: auto;
-    width: 60%;
-    border: 3px solid #73AD21;
-    padding: 10px;
-  }
-*/
+.content-section {
+    margin: 1em;
+}
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    /*
-    border-radius: 20px;
-    background-color: #a0d2eb;
-    background-color: pink;
-     */
-    margin: 0%;
-    padding: 0px;
-    gap: 20px;
-    width: 100%;
-    height: 60%;
-    /*max-height: fit-content;*/
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+.section-header {
+    font-family: "Belleza-Regular";
+    font-weight: normal;
+    color: black;
+    text-align: center;
+    font-size: 2.5em;
 }
 
-.container-row {
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    margin: 0%;
-    padding: 0px;
-    gap: 20px;
-    width: 100%;
-    height: 60%;
-}
-
-div .item {
-    align-self: center;
-    margin: 3%;
-    height: 100%;
-    width: fit-content;
-    padding: 5%;
-    background-color: #a0d2eb;
-    border-radius: 20px;
-}
-
-.info-item {
-    align-self: center;
-    margin: 5% 5% 15% 5%;
-    height: 100%;
-    width: fit-content;
-    padding: 2% 20% 2% 20%;
-    border-radius: 20px;
-    /*background-color: pink;*/
-}
-
-
-div .form {
-    align-self: center;
-    margin: 5%;
-    height: 100%;
-    width: 400px;
-    padding: 5%;
-    border-radius: 20px;
-    background-color: #a0d2eb;
-}
-
-/*div .form {
-    width: fit-content;
-    height: fit-content;
-    padding: 5%;
-    align-self: center;
-    background-color: #a0d2eb;
-    border-radius: 20px;
-}*/
-
-
-label {
+.about-band-image {
     float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%;
 }
 
-input {
-    float: right;
-    border: none;
-    width: 100%;
-    margin: 5px;
-    padding: 5px;
-}
-
-#submit-button {
-    float: none;
-    width: 100%;
-    background-color: #9facea;
-    border: none;
+.main-footer {
+    background-color: #494D5F;
     color: white;
-    padding: 10px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
+    padding: .25em 0;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    width: 100%;
+    height: 30px;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
     cursor: pointer;
 }
 
-/*
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: black;
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: black;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+.btn-primary {
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: black;
+}
+
+.shop-item {
+    margin: 100px;
+}
+
+
+.shop-item-image {
+    height: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: black;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: black;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: black;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #eee;
+    color: black;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: black;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+  }
+  
+  body {font-family: Arial, Helvetica, sans-serif;}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #494D5F;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: white; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.collapsible {
+    background-color: #494D5F;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #494D5F;
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #e5eaf5;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #e5eaf5;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #494D5F;
+  }
+  
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+  /* Style the sidenav links and the dropdown button */
+.dropdown-btn {
+  padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    text-align: left;
+    background-color: #e5eaf5;
+}
+
+/* On mouse-over */
+.dropdown-btn:hover {
+  color: black;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #494D5F;
+  color: black;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #e5eaf5;
+  padding-left: 8px;
+}
+
+
 div.login-form-container-container {
     box-sizing: border-box;
     border-radius: 25px;
@@ -214,93 +564,4 @@ div.login-form-container-container {
     padding: 10px;
     align-items: center;
 }
-*/
 
-.btn {
-    background-color: #9facea;
-    width: 95%;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px;
-    cursor: pointer;
-}
-
-form-container {
-    /*box-sizing: content-box;*/
-    display: flex;
-    border-radius: 25px;
-    background-color: #9facea;
-    border: 2px solid white;
-    margin: auto;
-    padding: 10px;
-    width: 60%;
-    align-items: center;
-}
-
-/*
-  div.register-form-container{
-    box-sizing: content-box;
-    border-radius: 25px;
-    border: 2px solid white;
-    background-color: teal;
-    padding: 10px;
-    margin: auto;
-    width: 60%;
-  }
-*/
-
-footer {
-    /* TODO: footer currently covers the bottom of screen  */
-    position: fixed; 
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    margin: 0 auto;
-    background-color: #494D5F;
-    color: white;
-    text-align: center;
-    overflow: hidden;
-    /*border-bottom: 2px solid black;*/
-    padding: 15px 0 0 0;
-}
-
-.footer-hr {
-    text-align: center;
-    width: 50%;
-    border-top: 1px solid white;
-    padding: 0;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-/*Database side nav menu
-
-.sidenav {
-    height: 75%;
-    width: 200px;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #494D5F;
-    overflow-x: hidden;
-    padding-top: 50px;
-    margin-top: 30%;
-
-}
-
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    }
-
-    */
